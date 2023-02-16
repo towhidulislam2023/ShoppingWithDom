@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping With Dom js</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-base-200 shadow-lg px-12 ">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">TowhidShop</a>
+            </div>
+            <div class="flex-none">
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <div class="indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span id="navbarUpdate" class="badge badge-sm indicator-item">0</span>
+                        </div>
+                    </label>
+                    <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+                        <div class="card-body">
+                            <span  class="font-bold text-lg"><span id="navbarUpdate1">0</span> Items</span>
+                            <span id="" class="text-info">Subtotal: $<span id="navpriceUpdate">000</span></span>
+                            <div class="card-actions">
+                                <button class="btn btn-primary btn-block">View cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="./img/young-bearded-man-with-striped-shirt.jpg" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="px-6 md:px-12">
+        <div class=" my-10 flex flex-col lg:flex-row gap-3 ">
+            <div class="lg:w-[65%] px-6 pb-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img class="w-full h-40"  src="./img/coffee.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="coffeePN" class="card-title">Coffee JS!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>price: $ <span class="font-bold" id="coffeePrice">1260</span></p>
+                      <p class="mb-5">Quantuty:<span class="font-bold" id="coffeeQuantity">5</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="coffeeBtn" class="btn btn-primary">Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img class="w-full h-40" src="./img/heart_js.jpg" alt="heart_js" /></figure>
+                    <div class="card-body">
+                      <h2 id="heartPN" class="card-title">Heart JS!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>price: $ <span class="font-bold" id="heartPrice">2000</span></p>
+                      <p class="mb-5">Quantuty:<span class="font-bold" id="heartQuantity">2</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="heartBtn" class="btn btn-primary">Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img class="w-full h-40" src="./img/panda.png" alt="panda" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Panda JS!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>price: $ <span class="font-bold" id="pandaPrice">1000</span></p>
+                      <p class="mb-5">Quantuty:<span class="font-bold" id="pandaQuantity">6</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="pandaBtn" class="btn btn-primary">Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img class="w-full h-40" src="./img/umbrella.png" alt="umbrella" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">umbrella JS!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>price: $ <span class="font-bold" id="umbrellaPrice">400</span></p>
+                      <p class="mb-5">Quantuty:<span class="font-bold" id="umbrellaQuantity">7</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="umbrellaBtn" class="btn btn-primary">Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img class="w-full h-40" src="./img/vue-js.jpg" alt="vue" /></figure>
+                    <div class="card-body">
+                      <h2 id="vuePN" class="card-title">Vue JS!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <input id="vuePrice" type="text" placeholder="Price" class="input input-bordered input-success w-full max-w-xs" />
+                      <input id="vueQuantity" type="text" placeholder="Quantity" class="input input-bordered input-success w-full max-w-xs" />
+                      <div class="card-actions justify-end">
+                        <button id="vueBtn"  class="btn btn-primary">Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="bg-gray-100 rounded-md p-6 lg:w-[38%] lg:h-[544px]">
+                <h1 class="text-4xl text-center font-bold underline" >Total Product- <span id="productListCount">0</span></h1>
+
+                <div class="overflow-x-auto mx-auto my-5">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead class="text-center">
+                        <tr>
+                          <th>No</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tablebody">
+                      </tbody>
+                    </table>
+                    <table class="table w-full mt-4">
+                      <tbody id="tableSecondBody">
+                        <tr>
+                            <th class="text-center" id="countNo">No</th>
+                            <th class="text-center" id="Total">Grand Total</th>
+                            <th class="text-center" id="totalPrice">Price</th>
+                            <th class="text-center" id="totalQuantity">Quantity</th>
+                            <th class="text-center" id="grandTotalPrice">Total</th>
+                          </tr>
+
+                      </tbody>
+                    </table>
+                    <button class="btn btn-wide mt-5 ">Check Out</button>
+                  </div>
+            </div>
+        </div>
+    </section>
+<script src="./js/function.js"></script>
+<script src="./js/main.js"></script>
+</body>
+
+</html>
